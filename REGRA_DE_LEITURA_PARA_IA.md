@@ -4,7 +4,7 @@
 Antes de iniciar qualquer análise, correção, implementação, alteração, reorganização ou modernização do VET MAX, a IA deverá obrigatoriamente:
 
 1. Acessar o repositório oficial:
-   https://github.com/jdavid465/SISTEMA-VET
+   https://github.com/ybyxadm/vetinos
 
 2. Ler integralmente o arquivo `README.md`.
 
