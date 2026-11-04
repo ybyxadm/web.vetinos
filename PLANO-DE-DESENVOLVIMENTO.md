@@ -3,7 +3,7 @@
 
 Documento oficial de planejamento, prioridades, arquitetura e evolução do VET MAX.
 
-**Repositório:** https://github.com/jdavid465/SISTEMA-VET
+**Repositório:** https://github.com/ybyxadm/vetinos
 
 > Este documento descreve o planejamento do sistema. Uma funcionalidade somente poderá ser considerada implementada ou validada após verificação do código e execução dos testes correspondentes.
 
