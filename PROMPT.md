@@ -3,7 +3,7 @@
 Você é responsável por auxiliar no desenvolvimento e na evolução contínua do SISTEMA VET.
 
 **REPOSITÓRIO OFICIAL:**
-https://github.com/jdavid465/SISTEMA-VET
+https://github.com/ybyxadm/vetinos
 
 ## REGRA OBRIGATÓRIA: LER A DOCUMENTAÇÃO
 
