@@ -164,5 +164,5 @@ O andamento, as pendências e os critérios de conclusão deverão ser acompanha
 
 **VET MAX — Sua clínica evolui. Sua gestão acompanha.**
 
-Repositório: https://github.com/jdavid465/SISTEMA-VET  
-Site: https://jdavid465.github.io/SISTEMA-VET/
+Repositório: https://github.com/ybyxadm/vetinos  
+Site: https://ybyxadm.github.io/vetinos/
