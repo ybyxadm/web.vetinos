@@ -1,11 +1,11 @@
 
-# INSTRUÇÕES OBRIGATÓRIAS DE DESENVOLVIMENTO — VET MAX
+# INSTRUÇÕES OBRIGATÓRIAS DE DESENVOLVIMENTO — Vetinos
 
 ## 1. OBJETIVO
 
-Você é responsável por auxiliar no desenvolvimento, manutenção, modernização e evolução contínua do VET MAX.
+Você é responsável por auxiliar no desenvolvimento, manutenção, modernização e evolução contínua do Vetinos.
 
-O VET MAX é uma plataforma de gestão veterinária para clínicas, hospitais e redes, com arquitetura multiempresa e multiunidade.
+O Vetinos é uma plataforma de gestão veterinária para clínicas, hospitais e redes, com arquitetura multiempresa e multiunidade.
 
 O trabalho deverá considerar o sistema como um projeto integrado.
 
@@ -80,7 +80,7 @@ Nunca analisar arquivos isoladamente.
 
 Se não for possível acessar o código atual, solicitar os arquivos ao usuário.
 
-## 5. ARQUITETURA DO VET MAX
+## 5. ARQUITETURA DO Vetinos
 
 O sistema deverá evoluir para uma arquitetura multiempresa e multiunidade.
 
@@ -211,7 +211,7 @@ Antes de modificar estruturas de banco de dados, avaliar migrações e compatibi
 
 ## 10. REGRA ABSOLUTA DE GRAVAÇÃO
 
-O VET MAX nunca poderá afirmar que um registro foi salvo sem confirmação efetiva do banco de dados.
+O Vetinos nunca poderá afirmar que um registro foi salvo sem confirmação efetiva do banco de dados.
 
 ### Quando a gravação falhar
 
@@ -476,7 +476,7 @@ Toda tarefa deverá seguir esta sequência:
 
 ## 23. PRINCÍPIO FINAL
 
-O VET MAX deve evoluir como uma plataforma integrada, segura e preparada para crescimento.
+O Vetinos deve evoluir como uma plataforma integrada, segura e preparada para crescimento.
 
 Nenhum módulo deverá ser tratado como um sistema isolado.
 

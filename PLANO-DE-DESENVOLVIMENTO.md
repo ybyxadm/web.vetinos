@@ -1,7 +1,7 @@
 
-# VET MAX — PLANO DE DESENVOLVIMENTO
+# Vetinos — PLANO DE DESENVOLVIMENTO
 
-Documento oficial de planejamento, prioridades, arquitetura e evolução do VET MAX.
+Documento oficial de planejamento, prioridades, arquitetura e evolução do Vetinos.
 
 **Repositório:** https://github.com/ybyxadm/vetinos
 
@@ -11,7 +11,7 @@ Documento oficial de planejamento, prioridades, arquitetura e evolução do VET 
 
 # 1. VISÃO DO PROJETO
 
-O VET MAX é uma plataforma de gestão veterinária destinada a clínicas, hospitais e redes veterinárias.
+O Vetinos é uma plataforma de gestão veterinária destinada a clínicas, hospitais e redes veterinárias.
 
 O sistema deverá permitir que uma organização possua uma ou várias unidades, com cadastros compartilhados e operações independentes conforme as permissões estabelecidas.
 
@@ -96,9 +96,9 @@ O projeto deverá manter:
 
 Sugestão de identificação visual dos projetos Firebase:
 
-- VET MAX - DESENVOLVIMENTO
-- VET MAX - TESTES
-- VET MAX - OFICIAL
+- Vetinos - DESENVOLVIMENTO
+- Vetinos - TESTES
+- Vetinos - OFICIAL
 
 A implementação deverá verificar a configuração atual antes de criar, migrar ou renomear projetos.
 
@@ -114,7 +114,7 @@ Credenciais e configurações privadas não deverão ser publicadas no repositó
 
 ## 3.1 Organização
 
-Representa o cliente contratante do VET MAX.
+Representa o cliente contratante do Vetinos.
 
 Pode ser:
 
@@ -450,7 +450,7 @@ A primeira validação prática poderá ser feita com uma organização parceira
 
 ## 8.1 Objetivo
 
-Criar monitoramento centralizado no painel MASTER para acompanhar a infraestrutura global do VET MAX.
+Criar monitoramento centralizado no painel MASTER para acompanhar a infraestrutura global do Vetinos.
 
 O monitoramento não deverá expor dados clínicos das organizações.
 
@@ -528,7 +528,7 @@ Mensagem ao usuário:
 
 Alerta ao administrador:
 
-> O VET MAX identificou uma falha de gravação. Verifique o ambiente, o módulo afetado e a disponibilidade do banco de dados.
+> O Vetinos identificou uma falha de gravação. Verifique o ambiente, o módulo afetado e a disponibilidade do banco de dados.
 
 O alerta deverá registrar, quando disponível:
 
@@ -688,7 +688,7 @@ Cada decisão deverá informar:
 
 # 17. PRINCÍPIO DE EVOLUÇÃO
 
-O VET MAX será construído como uma plataforma integrada.
+O Vetinos será construído como uma plataforma integrada.
 
 Cada módulo deverá aproveitar os cadastros, serviços, permissões e estruturas já existentes.
 

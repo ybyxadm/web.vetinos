@@ -1,19 +1,19 @@
-# VET MAX
+# Vetinos
 ### Gestão veterinária sem limites para o crescimento.
 
 **Plataforma veterinária multiempresa, com gestão de unidades, operação independente e visão administrativa centralizada.**
 
-O VET MAX é uma plataforma de gestão veterinária desenvolvida para acompanhar a evolução de clínicas, hospitais e redes veterinárias.
+O Vetinos é uma plataforma de gestão veterinária desenvolvida para acompanhar a evolução de clínicas, hospitais e redes veterinárias.
 
 Uma solução que integra atendimento, prontuário, internação, estoque, financeiro e gestão administrativa em um único ambiente, permitindo que cada estabelecimento tenha sua própria operação, enquanto a organização mantém uma visão estratégica de todo o negócio.
 
 ## Uma clínica hoje. Uma rede amanhã.
 
-O VET MAX foi pensado para acompanhar o crescimento da sua empresa.
+O Vetinos foi pensado para acompanhar o crescimento da sua empresa.
 
 Comece com uma única unidade e amplie sua estrutura conforme suas necessidades. Cadastre novos estabelecimentos, organize equipes, distribua permissões e acompanhe os resultados de cada unidade individualmente ou de forma consolidada.
 
-Você não precisa trocar de sistema quando sua clínica crescer. O VET MAX cresce junto com ela.
+Você não precisa trocar de sistema quando sua clínica crescer. O Vetinos cresce junto com ela.
 
 ## Uma organização. Várias unidades. Uma gestão inteligente.
 
@@ -40,7 +40,7 @@ Cada gerente administra sua unidade conforme as permissões concedidas, sem comp
 
 ## Controle inteligente de acessos.
 
-Com o Módulo de Restrição de Acessos, o VET MAX identifica quando um registro está sendo utilizado por outro colaborador.
+Com o Módulo de Restrição de Acessos, o Vetinos identifica quando um registro está sendo utilizado por outro colaborador.
 
 Cadastros de tutores, pacientes, produtos e operações podem receber bloqueios temporários de edição, evitando alterações simultâneas conflitantes.
 
@@ -48,11 +48,11 @@ Os colaboradores continuam trabalhando normalmente em outros registros, sem prec
 
 ## Uma plataforma preparada para diferentes realidades.
 
-O VET MAX foi concebido para evoluir com diferentes modelos de operação, incluindo acesso online e uma futura modalidade com servidores locais e sincronização de dados.
+O Vetinos foi concebido para evoluir com diferentes modelos de operação, incluindo acesso online e uma futura modalidade com servidores locais e sincronização de dados.
 
 Mais flexibilidade para a clínica, mais autonomia para as equipes e mais controle para os gestores.
 
-## VET MAX
+## Vetinos
 **Sua clínica evolui. Sua gestão acompanha.**
 
 Tecnologia, organização e inteligência para cuidar de quem cuida dos animais.

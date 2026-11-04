@@ -173,7 +173,7 @@ const modules = [
 
 const faqs = [
   {
-    question: 'O VET MAX é destinado apenas a clínicas pequenas?',
+    question: 'O Vetinos é destinado apenas a clínicas pequenas?',
     answer: 'Não. A proposta é atender clínicas independentes, hospitais veterinários e organizações com várias unidades, permitindo uma evolução gradual da estrutura.'
   },
   {
@@ -182,7 +182,7 @@ const faqs = [
   },
   {
     question: 'Os módulos já estão todos disponíveis?',
-    answer: 'Não. O VET MAX está em desenvolvimento. Os módulos serão disponibilizados gradualmente, depois de implementados, integrados e validados.'
+    answer: 'Não. O Vetinos está em desenvolvimento. Os módulos serão disponibilizados gradualmente, depois de implementados, integrados e validados.'
   },
   {
     question: 'Como funcionam os planos e os preços?',
@@ -190,7 +190,7 @@ const faqs = [
   },
   {
     question: 'Como posso solicitar informações?',
-    answer: 'Utilize o formulário desta página. Sua mensagem será encaminhada para a equipe responsável pelo VET MAX.'
+    answer: 'Utilize o formulário desta página. Sua mensagem será encaminhada para a equipe responsável pelo Vetinos.'
   },
   {
     question: 'O sistema protege os dados de cada clínica?',
@@ -211,7 +211,7 @@ function Footer() {
         fontSize: '12px',
         lineHeight: 1.8
       }}>
-        © 2026 VET MAX. Todos os direitos reservados.
+        © 2026 Vetinos. Todos os direitos reservados.
         <br />
         by Jonathan D. Andrade
       </div>
@@ -275,7 +275,7 @@ export default function App() {
   const [contact, setContact] = useState({
     name: '',
     email: '',
-    subject: 'Quero conhecer o VET MAX',
+    subject: 'Quero conhecer o Vetinos',
     message: ''
   });
   const [website, setWebsite] = useState('');
@@ -299,7 +299,7 @@ export default function App() {
           }
         } catch (err) {
           console.error('Erro ao buscar dados da clínica:', err);
-          setClinicData({ name: 'VET MAX' });
+          setClinicData({ name: 'Vetinos' });
         }
 
         setCurrentView('dashboard');
@@ -353,8 +353,8 @@ export default function App() {
         },
         body: JSON.stringify({
           access_key: WEB3FORMS_ACCESS_KEY,
-          subject: `VET MAX - ${contact.subject}`,
-          from_name: 'Site VET MAX',
+          subject: `Vetinos - ${contact.subject}`,
+          from_name: 'Site Vetinos',
           name: contact.name,
           email: contact.email,
           assunto: contact.subject,
@@ -377,7 +377,7 @@ export default function App() {
       setContact({
         name: '',
         email: '',
-        subject: 'Quero conhecer o VET MAX',
+        subject: 'Quero conhecer o Vetinos',
         message: ''
       });
     } catch (err) {
@@ -407,7 +407,7 @@ export default function App() {
         color: '#c2410c',
         fontFamily: 'Arial, sans-serif'
       }}>
-        Carregando VET MAX...
+        Carregando Vetinos...
       </div>
     );
   }
@@ -436,7 +436,7 @@ export default function App() {
             alignItems: 'center',
             gap: '15px'
           }}>
-            <span style={styles.brand}>🐾 VET MAX</span>
+            <span style={styles.brand}>🐾 Vetinos</span>
             <h2 style={{
               margin: 0,
               fontSize: '20px',
@@ -483,7 +483,7 @@ export default function App() {
             fontSize: '30px',
             marginBottom: '15px'
           }}>
-            Bem-vindo ao VET MAX!
+            Bem-vindo ao Vetinos!
           </h1>
           <p style={{
             color: '#c2410c',
@@ -664,9 +664,9 @@ export default function App() {
         `}</style>
 
         <main className="vet-login-main">
-          <section className="vet-login-card" aria-label="Acesso ao VET MAX">
+          <section className="vet-login-card" aria-label="Acesso ao Vetinos">
             <div style={{ marginBottom: '20px' }}>
-              <span style={styles.brand}>🐾 VET MAX</span>
+              <span style={styles.brand}>🐾 Vetinos</span>
             </div>
 
             <h2 style={{
@@ -764,7 +764,7 @@ export default function App() {
             </div>
           </section>
 
-          <section className="vet-login-brand-panel" aria-label="Sobre o VET MAX">
+          <section className="vet-login-brand-panel" aria-label="Sobre o Vetinos">
             <span className="vet-login-kicker">Gestão veterinária preparada para crescer</span>
             <h1 className="vet-login-title">
               Sua clínica evolui.<br />
@@ -802,7 +802,7 @@ export default function App() {
         </main>
 
         <footer className="vet-login-footer">
-          © 2026 VET MAX. Todos os direitos reservados.<br />
+          © 2026 Vetinos. Todos os direitos reservados.<br />
           by Jonathan D. Andrade
         </footer>
       </div>
@@ -910,7 +910,7 @@ export default function App() {
           gap: '20px'
         }}>
           <a href="#inicio" style={{ textDecoration: 'none' }}>
-            <span style={styles.brand}>🐾 VET MAX</span>
+            <span style={styles.brand}>🐾 Vetinos</span>
           </a>
 
           <nav className="vet-nav" style={{
@@ -991,7 +991,7 @@ export default function App() {
                 gap: '12px'
               }}>
                 <button onClick={goToContact} style={styles.primaryButton}>
-                  Quero conhecer o VET MAX
+                  Quero conhecer o Vetinos
                 </button>
                 <a href="#recursos" style={styles.secondaryButton}>
                   Conhecer a plataforma
@@ -1057,9 +1057,9 @@ export default function App() {
         <section id="sobre" className="vet-section" style={styles.section}>
           <div style={styles.container}>
             <SectionHeading
-              eyebrow="Conheça o VET MAX"
+              eyebrow="Conheça o Vetinos"
               title="Mais estrutura para acompanhar o crescimento da sua operação."
-              text="O VET MAX está sendo desenvolvido para conectar os principais processos de uma operação veterinária em uma plataforma organizada, modular e preparada para crescer."
+              text="O Vetinos está sendo desenvolvido para conectar os principais processos de uma operação veterinária em uma plataforma organizada, modular e preparada para crescer."
             />
 
             <div className="vet-three">
@@ -1132,7 +1132,7 @@ export default function App() {
                 fontSize: '15px',
                 lineHeight: 1.85
               }}>
-                A estrutura do VET MAX considera o crescimento desde
+                A estrutura do Vetinos considera o crescimento desde
                 o início. A proposta é permitir que uma organização
                 comece com uma unidade e amplie sua operação sem
                 precisar tratar cada estabelecimento como um sistema
@@ -1217,7 +1217,7 @@ export default function App() {
         <section id="recursos" className="vet-section" style={styles.section}>
           <div style={styles.container}>
             <SectionHeading
-              eyebrow="Ecossistema VET MAX"
+              eyebrow="Ecossistema Vetinos"
               title="Os processos da gestão veterinária, conectados."
               text="A plataforma está sendo desenvolvida em módulos integrados. Cada recurso será disponibilizado gradualmente, após sua implementação e validação."
             />
@@ -1349,7 +1349,7 @@ export default function App() {
             <SectionHeading
               eyebrow="Planos e condições"
               title="Uma solução que acompanha o tamanho da sua operação."
-              text="Os planos comerciais do VET MAX estão em formação. A proposta é estruturar condições adequadas para diferentes tamanhos e necessidades de operação."
+              text="Os planos comerciais do Vetinos estão em formação. A proposta é estruturar condições adequadas para diferentes tamanhos e necessidades de operação."
             />
 
             <div className="vet-three">
@@ -1421,7 +1421,7 @@ export default function App() {
                     onClick={() => {
                       setContact((previous) => ({
                         ...previous,
-                        subject: `Interesse no VET MAX - ${plan.title}`
+                        subject: `Interesse no Vetinos - ${plan.title}`
                       }));
                       goToContact();
                     }}
@@ -1464,7 +1464,7 @@ export default function App() {
               A confiança na gestão começa pela organização e pelo cuidado
               com as informações. Segurança, integridade dos registros e
               controle de acesso fazem parte dos requisitos fundamentais
-              do VET MAX.
+              do Vetinos.
             </p>
 
             <div className="vet-three">
@@ -1527,7 +1527,7 @@ export default function App() {
               margin: '0 auto 25px',
               color: '#ffedd5'
             }}>
-              Conheça a proposta do VET MAX e acompanhe o desenvolvimento
+              Conheça a proposta do Vetinos e acompanhe o desenvolvimento
               de uma plataforma preparada para crescer.
             </p>
             <button
@@ -1552,7 +1552,7 @@ export default function App() {
             <SectionHeading
               eyebrow="Perguntas frequentes"
               title="Tire suas dúvidas."
-              text="Algumas respostas sobre a proposta, a estrutura e o desenvolvimento do VET MAX."
+              text="Algumas respostas sobre a proposta, a estrutura e o desenvolvimento do Vetinos."
             />
 
             <div style={{ display: 'grid', gap: '11px' }}>
@@ -1609,7 +1609,7 @@ export default function App() {
             <SectionHeading
               eyebrow="Fale com a equipe"
               title="Vamos conversar sobre sua operação?"
-              text="Envie sua mensagem para conhecer melhor o VET MAX, demonstrar interesse ou acompanhar as novidades do projeto."
+              text="Envie sua mensagem para conhecer melhor o Vetinos, demonstrar interesse ou acompanhar as novidades do projeto."
             />
 
             <div className="vet-two" style={{
@@ -1659,7 +1659,7 @@ export default function App() {
                     <span style={{ fontSize: '22px' }}>🐾</span>
                     <div>
                       <strong style={{ color: '#9a3412', fontSize: '14px' }}>
-                        VET MAX
+                        Vetinos
                       </strong>
                       <p style={{
                         color: '#78716c',
@@ -1770,7 +1770,7 @@ export default function App() {
                     onChange={handleContactChange}
                     style={styles.input}
                   >
-                    <option>Quero conhecer o VET MAX</option>
+                    <option>Quero conhecer o Vetinos</option>
                     <option>Interesse em planos e preços</option>
                     <option>Tenho uma clínica veterinária</option>
                     <option>Tenho um hospital veterinário</option>

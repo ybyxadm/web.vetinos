@@ -1,7 +1,7 @@
 
 # REGRA OBRIGATÓRIA — LEITURA DA DOCUMENTAÇÃO
 
-Antes de iniciar qualquer análise, correção, implementação, alteração, reorganização ou modernização do VET MAX, a IA deverá obrigatoriamente:
+Antes de iniciar qualquer análise, correção, implementação, alteração, reorganização ou modernização do Vetinos, a IA deverá obrigatoriamente:
 
 1. Acessar o repositório oficial:
    https://github.com/ybyxadm/vetinos

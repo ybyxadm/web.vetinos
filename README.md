@@ -1,10 +1,10 @@
 
-# VET MAX
+# Vetinos
 ## Gestão veterinária preparada para crescer.
 
 **Uma plataforma para clínicas, hospitais e redes veterinárias.**
 
-O VET MAX é um sistema de gestão veterinária em desenvolvimento, projetado para atender desde uma clínica independente até organizações com várias unidades.
+O Vetinos é um sistema de gestão veterinária em desenvolvimento, projetado para atender desde uma clínica independente até organizações com várias unidades.
 
 Sua arquitetura prevê cadastros compartilhados dentro de cada organização, operação independente por unidade e administração centralizada para gestores autorizados.
 
@@ -12,7 +12,7 @@ Sua arquitetura prevê cadastros compartilhados dentro de cada organização, op
 
 ---
 
-## 1. O que o VET MAX pretende oferecer
+## 1. O que o Vetinos pretende oferecer
 
 A plataforma está sendo desenvolvida em módulos integrados:
 
@@ -35,7 +35,7 @@ Os módulos serão disponibilizados gradualmente, conforme forem implementados e
 
 ## 2. Arquitetura multiempresa e multiunidade
 
-O VET MAX será estruturado em três níveis:
+O Vetinos será estruturado em três níveis:
 
 **Organização:** representa a clínica, hospital ou rede contratante.
 
@@ -124,7 +124,7 @@ Os testes de indisponibilidade serão realizados no ambiente TESTES.
 
 ## 7. Apresentação comercial
 
-A apresentação comercial será disponibilizada no próprio site do VET MAX, utilizando o documento de apresentação comercial como referência.
+A apresentação comercial será disponibilizada no próprio site do Vetinos, utilizando o documento de apresentação comercial como referência.
 
 Os planos e condições comerciais ainda estão em formação. A configuração futura deverá permitir administração pelo painel MASTER.
 
@@ -154,7 +154,7 @@ A arquitetura e as tecnologias deverão ser confirmadas no código atual antes d
 
 ## 10. Status do projeto
 
-O VET MAX está em desenvolvimento.
+O Vetinos está em desenvolvimento.
 
 A existência de um módulo no planejamento não significa que ele esteja implementado ou validado.
 
@@ -162,7 +162,7 @@ O andamento, as pendências e os critérios de conclusão deverão ser acompanha
 
 ---
 
-**VET MAX — Sua clínica evolui. Sua gestão acompanha.**
+**Vetinos — Sua clínica evolui. Sua gestão acompanha.**
 
 Repositório: https://github.com/ybyxadm/vetinos  
 Site: https://ybyxadm.github.io/vetinos/

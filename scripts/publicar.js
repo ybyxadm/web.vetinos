@@ -52,7 +52,7 @@ function validarArquivos() {
   }
 
   if (
-    /\/SISTEMA-VET\/assets\/index-[^"' ]+\.js/.test(template)
+    /\Vetinos\/assets\/index-[^"' ]+\.js/.test(template)
   ) {
     throw new Error(
       'O template contém uma referência de JavaScript compilado.'
@@ -108,7 +108,7 @@ function prepararBackup(diretorioBackup, destinos) {
 
 function atualizarArquivosPublicados() {
   const diretorioBackup = fs.mkdtempSync(
-    path.join(os.tmpdir(), 'sistema-vet-backup-')
+    path.join(os.tmpdir(), 'Vetinos-backup-')
   );
 
   const indexOriginal = fs.readFileSync(indexHtml);
@@ -131,7 +131,7 @@ function atualizarArquivosPublicados() {
 
     const htmlGerado = fs.readFileSync(indexDist, 'utf8');
 
-    if (!htmlGerado.includes('/SISTEMA-VET/assets/')) {
+    if (!htmlGerado.includes('vetinos/assets/')) {
       throw new Error(
         'O HTML compilado não contém os caminhos esperados do projeto.'
       );
