@@ -17,7 +17,7 @@ Princípios fundamentais:
 
 ## 2. REPOSITÓRIO OFICIAL
 
-https://github.com/jdavid465/SISTEMA-VET
+https://github.com/ybyxadm/vetinos
 
 O usuário trabalha com:
 
