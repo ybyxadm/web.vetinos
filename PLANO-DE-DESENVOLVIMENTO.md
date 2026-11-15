@@ -317,6 +317,7 @@ Exemplos:
 | Treinamento de funcionários | Utiliza usuários, funções, permissões e unidades para atribuir trilhas e acompanhar capacitações |
 | Assinatura eletrônica/digital | Integra documentos a tutores, pacientes, atendimentos, internações e procedimentos, mantendo evidências e rastreabilidade |
 | Monitoramento de transfusão | Integra o paciente e o internamento ao registro de hemocomponentes, parâmetros e intercorrências |
+| Central de Conhecimento e Comunicação Interna | Utiliza usuários, funções, setores, unidades e permissões para criar, revisar, publicar e distribuir materiais internos, acompanhar leituras e manter versões |
 
 ## 5.1 Regras de integração
 
@@ -487,6 +488,33 @@ Objetivo: disponibilizar uma tabela de acompanhamento da transfusão sanguínea,
 - [ ] Testar permissões, consistência dos horários, campos obrigatórios e uso em dispositivos móveis.
 
 **Regras clínicas e de segurança:** o módulo será uma ferramenta de registro e acompanhamento. Não deverá prescrever protocolos, definir parâmetros clínicos automaticamente ou substituir a avaliação do médico-veterinário. Os intervalos, limites e condutas deverão ser definidos e validados por profissional habilitado e pela instituição.
+
+
+## 6.10 MÓDULO — CENTRAL DE CONHECIMENTO, COMUNICAÇÃO E DOCUMENTOS INTERNOS
+
+**Status: Planejado.** Funcionalidade aprovada para desenvolvimento futuro. Ainda não implementada.
+
+Objetivo: permitir que o gestor da organização ou unidade, ou colaboradores formalmente delegados, criem, redijam, organizem e disponibilizem materiais diretamente no Vetinos, direcionando cada conteúdo aos setores, funções, unidades ou colaboradores correspondentes.
+
+- [ ] Criar uma biblioteca central de conteúdos internos, com organização por categorias, assuntos, setores e funções.
+- [ ] Disponibilizar editor de texto dentro do sistema para redigir e formatar comunicados, orientações, manuais, instruções de trabalho e procedimentos operacionais padrão (POP).
+- [ ] Permitir anexar materiais complementares, como PDFs, imagens, vídeos e outros formatos definidos na implementação.
+- [ ] Disponibilizar modelos reutilizáveis para documentos e comunicados recorrentes.
+- [ ] Permitir salvar conteúdos como rascunho, editar, revisar, aprovar, publicar, arquivar e, quando aplicável, programar a publicação.
+- [ ] Permitir direcionar cada publicação para toda a organização, unidades específicas, setores, funções ou colaboradores selecionados.
+- [ ] Permitir que o gestor delegue permissões específicas para criar, redigir, editar, revisar, aprovar, publicar e arquivar conteúdos, sem conceder automaticamente acesso administrativo completo.
+- [ ] Disponibilizar os materiais aos usuários destinatários em uma área própria do sistema, com indicação de conteúdos novos, atualizados e pendentes de leitura.
+- [ ] Permitir exigir confirmação de leitura e registrar usuário, data e hora da confirmação.
+- [ ] Disponibilizar acompanhamento gerencial de visualizações, confirmações de leitura e pendências, com filtros por conteúdo, setor, função, unidade e colaborador.
+- [ ] Permitir definir validade, data de revisão e necessidade de republicação ou nova confirmação quando um material for atualizado.
+- [ ] Manter histórico de versões, autoria, responsáveis pela revisão e publicação, datas e alterações relevantes, sem sobrescrever evidências anteriores.
+- [ ] Permitir busca e consulta dos materiais conforme as permissões do usuário.
+- [ ] Prever notificações internas aos destinatários quando houver nova publicação, atualização ou prazo de leitura.
+- [ ] Integrar conteúdos de capacitação à biblioteca e às trilhas do módulo de Treinamento e Capacitação de Funcionários.
+- [ ] Permitir encaminhar documentos que exijam ciência formal ao módulo de Assinatura Eletrônica/Digital, quando aplicável.
+- [ ] Testar permissões de criação e publicação, direcionamento por setor, confirmação de leitura, histórico de versões, anexos e uso em dispositivos móveis.
+
+**Regras de integração e segurança:** utilizar os usuários, funções, setores, unidades e permissões já existentes, respeitando o isolamento entre organizações. O gestor deverá controlar as delegações e o alcance das publicações. A confirmação de leitura deverá ser tratada como evidência de ciência, não como assinatura eletrônica ou concordância formal. Quando um documento exigir assinatura, deverá utilizar o fluxo próprio de assinatura eletrônica/digital. Publicações, confirmações e alterações de permissão somente poderão ser consideradas concluídas após confirmação efetiva do banco de dados.
 
 # 7. DISPONIBILIZAÇÃO GRADUAL
 
