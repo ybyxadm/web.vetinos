@@ -314,6 +314,9 @@ Exemplos:
 | Calculadora de Doses | Utiliza paciente e peso atualizado, prescrição informada e dados de concentração/apresentação dos medicamentos; integra-se ao cadastro de medicamentos, atendimento, prontuário e internamento |
 | Financeiro | Recebe serviços e cobranças dos atendimentos |
 | Relatórios | Consolida dados conforme permissões |
+| Treinamento de funcionários | Utiliza usuários, funções, permissões e unidades para atribuir trilhas e acompanhar capacitações |
+| Assinatura eletrônica/digital | Integra documentos a tutores, pacientes, atendimentos, internações e procedimentos, mantendo evidências e rastreabilidade |
+| Monitoramento de transfusão | Integra o paciente e o internamento ao registro de hemocomponentes, parâmetros e intercorrências |
 
 ## 5.1 Regras de integração
 
@@ -421,6 +424,69 @@ Objetivo: disponibilizar uma ferramenta de apoio ao cálculo matemático de volu
 - [ ] Testar cálculos, conversões, limites, entradas inválidas e comportamento em diferentes dispositivos.
 
 **Regras de segurança:** a calculadora deverá executar somente o cálculo matemático com os parâmetros informados e prescritos. Não deverá sugerir ou definir doses terapêuticas automaticamente, substituir a avaliação do médico-veterinário nem confirmar a administração do medicamento. Os resultados deverão ser conferidos por profissional habilitado antes do uso clínico.
+
+## 6.7 MÓDULO — TREINAMENTO E CAPACITAÇÃO DE FUNCIONÁRIOS
+
+**Status: Planejado.** Funcionalidade aprovada para desenvolvimento futuro. Ainda não implementada.
+
+Objetivo: organizar treinamentos internos, padronizar procedimentos e acompanhar a capacitação dos colaboradores de cada organização.
+
+- [ ] Criar biblioteca de treinamentos com materiais em texto, documentos e vídeos.
+- [ ] Permitir organizar conteúdos por assunto, setor, função e nível de conhecimento.
+- [ ] Criar trilhas de aprendizagem para funções como médico-veterinário, auxiliar, recepção e financeiro.
+- [ ] Permitir que gestores autorizados atribuam treinamentos obrigatórios ou opcionais a colaboradores, funções ou unidades.
+- [ ] Definir prazos, periodicidade e regras de reciclagem quando aplicável.
+- [ ] Registrar início, progresso, conclusão e pendências de cada treinamento.
+- [ ] Permitir avaliações, questionários e critérios mínimos de aprovação.
+- [ ] Registrar responsável pelo conteúdo, versão do material e data de disponibilização.
+- [ ] Manter histórico individual de capacitações e evidências de conclusão.
+- [ ] Disponibilizar relatórios para gestores autorizados, com filtros por colaborador, função, unidade, treinamento e período.
+- [ ] Controlar permissões de criação, edição, atribuição e consulta.
+- [ ] Garantir que o acesso aos registros respeite o isolamento entre organizações.
+
+**Regras de integração e segurança:** utilizar os usuários, funções, permissões e unidades já existentes. A conclusão de um treinamento deverá ser registrada somente após confirmação efetiva do banco de dados. Alterações em um conteúdo não deverão apagar o histórico de versões ou conclusões anteriores.
+
+## 6.8 MÓDULO — ASSINATURA ELETRÔNICA/DIGITAL E GESTÃO DOCUMENTAL
+
+**Status: Planejado.** Funcionalidade aprovada para desenvolvimento futuro. Ainda não implementada.
+
+Objetivo: permitir a preparação, envio, assinatura, armazenamento e consulta de documentos vinculados à rotina clínica e administrativa do Vetinos.
+
+- [ ] Criar gestão de modelos de documentos e termos.
+- [ ] Permitir gerar documentos vinculados ao tutor, paciente, atendimento, internamento ou procedimento.
+- [ ] Prever termos de consentimento e autorização, incluindo internação, alta, anestesia, cirurgia e procedimentos.
+- [ ] Permitir assinatura por tutores, responsáveis legais e profissionais, conforme o tipo de documento.
+- [ ] Definir identificação e autenticação do signatário compatíveis com o nível de segurança exigido.
+- [ ] Registrar data e hora, identidade declarada e método de autenticação, versão do documento e evidências técnicas disponíveis.
+- [ ] Preservar integridade do documento assinado, com mecanismo de verificação de alterações e trilha de auditoria.
+- [ ] Permitir consulta, impressão e exportação do documento final, por exemplo em PDF.
+- [ ] Manter histórico de documentos, assinaturas, cancelamentos e eventuais novas versões, sem sobrescrever evidências anteriores.
+- [ ] Controlar acesso aos documentos conforme organização, unidade, vínculo com o atendimento e permissões do usuário.
+- [ ] Avaliar integração com um provedor especializado de assinatura, caso os requisitos técnicos ou jurídicos exijam.
+- [ ] Definir política de retenção, armazenamento, backup e recuperação dos documentos.
+
+**Regras legais e de segurança:** distinguir assinatura eletrônica simples, avançada e qualificada/digital, sem presumir que todas possuem o mesmo nível de validade ou que uma modalidade atende a qualquer documento. Os requisitos deverão ser avaliados conforme a legislação brasileira, a finalidade do documento e o nível de evidência necessário, com validação jurídica antes da liberação. O sistema não deverá declarar validade jurídica automática sem que os requisitos aplicáveis tenham sido verificados.
+
+## 6.9 MÓDULO — MONITORAMENTO DE TRANSFUSÃO SANGUÍNEA
+
+**Status: Planejado.** Funcionalidade aprovada para desenvolvimento futuro. Ainda não implementada.
+
+Objetivo: disponibilizar uma tabela de acompanhamento da transfusão sanguínea, vinculada ao paciente e ao internamento, para registrar parâmetros, horários e possíveis intercorrências durante o procedimento.
+
+- [ ] Criar registro de transfusão vinculado ao paciente, internamento e profissional responsável.
+- [ ] Registrar indicação, tipo de hemocomponente, identificação da bolsa, lote ou código de rastreio, volume e dados relevantes do produto.
+- [ ] Registrar verificações pré-transfusionais e informações de compatibilidade, conforme protocolo definido pelo médico-veterinário responsável.
+- [ ] Criar tabela de monitoramento com horário e parâmetros clínicos antes, durante e após a transfusão.
+- [ ] Permitir configurar os intervalos de monitoramento conforme protocolo clínico adotado pela instituição e orientação do médico-veterinário responsável.
+- [ ] Registrar temperatura, frequência cardíaca, frequência respiratória, pressão arterial, mucosas e outros parâmetros definidos pelo protocolo.
+- [ ] Registrar sinais de reação transfusional, intercorrências, condutas adotadas e evolução.
+- [ ] Identificar o profissional responsável por cada registro, com data e hora.
+- [ ] Permitir encerrar a transfusão com resumo do procedimento e observações.
+- [ ] Integrar o registro ao histórico clínico e ao internamento.
+- [ ] Preservar rastreabilidade e histórico de alterações.
+- [ ] Testar permissões, consistência dos horários, campos obrigatórios e uso em dispositivos móveis.
+
+**Regras clínicas e de segurança:** o módulo será uma ferramenta de registro e acompanhamento. Não deverá prescrever protocolos, definir parâmetros clínicos automaticamente ou substituir a avaliação do médico-veterinário. Os intervalos, limites e condutas deverão ser definidos e validados por profissional habilitado e pela instituição.
 
 # 7. DISPONIBILIZAÇÃO GRADUAL
 
