@@ -28,6 +28,9 @@ A plataforma está sendo desenvolvida em módulos integrados:
 - Módulo Calculadora de Doses.
 - Caixa e financeiro.
 - Gestão de colaboradores e permissões.
+- Treinamento e capacitação de funcionários.
+- Assinatura eletrônica/digital e gestão documental.
+- Monitoramento de transfusão sanguínea.
 - Relatórios e indicadores.
 - Painel administrativo MASTER.
 
