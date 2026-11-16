@@ -3,7 +3,17 @@
 
 Documento oficial de planejamento, prioridades, arquitetura e evolução do Vetinos.
 
-**Repositório:** https://github.com/ybyxadm/vetinos
+**Repositório:** 
+
+Repositórios em : https://github.com/ybyxadm
+site institucional git: https://ybyxadm.github.io/web.vetinos/
+site sistema git: https://ybyxadm.github.io/web.vetinos/
+
+redirecionamentos
+Site institucional firebase: https://web-vetinos.web.app
+      https://web-vetinos.firebaseapp.com
+site sistema firebase: https://app-vetinos.web.app
+      https://app-vetinos.firebaseapp.com
 
 > Este documento descreve o planejamento do sistema. Uma funcionalidade somente poderá ser considerada implementada ou validada após verificação do código e execução dos testes correspondentes.
 
