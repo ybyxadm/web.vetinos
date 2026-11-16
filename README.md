@@ -167,5 +167,10 @@ O andamento, as pendências e os critérios de conclusão deverão ser acompanha
 
 **Vetinos — Sua clínica evolui. Sua gestão acompanha.**
 
-Repositório: https://github.com/ybyxadm/vetinos  
-Site: https://ybyxadm.github.io/vetinos/
+Repositórios em : https://github.com/ybyxadm
+site institucional git: https://ybyxadm.github.io/web.vetinos/
+site sistema git: https://ybyxadm.github.io/web.vetinos/
+
+redirecionamentos
+Site institucional firebase:web-vetinos.web.app, web-vetinos.firebaseapp.com
+site sistema firebase: app-vetinos.web.app , app-vetinos.firebaseapp.com
