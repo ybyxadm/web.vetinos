@@ -4,7 +4,16 @@
 Antes de iniciar qualquer análise, correção, implementação, alteração, reorganização ou modernização do Vetinos, a IA deverá obrigatoriamente:
 
 1. Acessar o repositório oficial:
-   https://github.com/ybyxadm/vetinos
+   
+2. Repositórios em : https://github.com/ybyxadm
+site institucional git: https://ybyxadm.github.io/web.vetinos/
+site sistema git: https://ybyxadm.github.io/web.vetinos/
+
+redirecionamentos
+Site institucional firebase: https://web-vetinos.web.app
+      https://web-vetinos.firebaseapp.com
+site sistema firebase: https://app-vetinos.web.app
+      https://app-vetinos.firebaseapp.com
 
 2. Ler integralmente o arquivo `README.md`.
 
