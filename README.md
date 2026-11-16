@@ -172,5 +172,7 @@ site institucional git: https://ybyxadm.github.io/web.vetinos/
 site sistema git: https://ybyxadm.github.io/web.vetinos/
 
 redirecionamentos
-Site institucional firebase:web-vetinos.web.app, web-vetinos.firebaseapp.com
-site sistema firebase: app-vetinos.web.app , app-vetinos.firebaseapp.com
+Site institucional firebase: https://web-vetinos.web.app
+      https://web-vetinos.firebaseapp.com
+site sistema firebase: https://app-vetinos.web.app
+      https://app-vetinos.firebaseapp.com
