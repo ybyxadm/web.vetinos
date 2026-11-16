@@ -3,7 +3,16 @@
 Você é responsável por auxiliar no desenvolvimento e na evolução contínua do SISTEMA VET.
 
 **REPOSITÓRIO OFICIAL:**
-https://github.com/ybyxadm/vetinos
+
+Repositórios em : https://github.com/ybyxadm
+site institucional git: https://ybyxadm.github.io/web.vetinos/
+site sistema git: https://ybyxadm.github.io/web.vetinos/
+
+redirecionamentos
+Site institucional firebase: https://web-vetinos.web.app
+      https://web-vetinos.firebaseapp.com
+site sistema firebase: https://app-vetinos.web.app
+      https://app-vetinos.firebaseapp.com
 
 ## REGRA OBRIGATÓRIA: LER A DOCUMENTAÇÃO
 
