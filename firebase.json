@@ -4,9 +4,9 @@
     "location": "nam5",
     "rules": "firestore.rules",
     "indexes": "firestore.indexes.json"
-  {
+  },
   "hosting": {
-    "public": "docs", 
+    "public": "docs",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -15,7 +15,7 @@
     "redirects": [
       {
         "source": "**",
-        "destination": "https://ybyxadm.github.io/vetinos/",
+        "destination": "https://github.io",
         "type": 301
       }
     ]

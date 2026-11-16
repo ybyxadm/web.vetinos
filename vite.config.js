@@ -2,10 +2,12 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
+  root: 'docs',
+  publicDir: 'public',
   plugins: [react()],
-  base: '/vetinos/',
+  base: '/web.vetinos/',
   build: {
-    outDir: 'dist',
+    outDir: '../dist',
     emptyOutDir: true,
   },
 })

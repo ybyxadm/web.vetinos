@@ -52,7 +52,7 @@ function validarArquivos() {
   }
 
   if (
-    /\Vetinos\/assets\/index-[^"' ]+\.js/.test(template)
+    /\/(web\.)?vetinos\/assets\/index-[^"' ]+\.js/i.test(template)
   ) {
     throw new Error(
       'O template contém uma referência de JavaScript compilado.'
@@ -131,9 +131,9 @@ function atualizarArquivosPublicados() {
 
     const htmlGerado = fs.readFileSync(indexDist, 'utf8');
 
-    if (!htmlGerado.includes('vetinos/assets/')) {
+    if (!htmlGerado.includes('web.vetinos/assets/')) {
       throw new Error(
-        'O HTML compilado não contém os caminhos esperados do projeto.'
+        'O HTML compilado não contém os caminhos esperados do projeto (/web.vetinos/assets/).'
       );
     }
 
@@ -238,7 +238,7 @@ function publicarGit() {
   executar('git', [
     'commit',
     '-m',
-    'Atualiza SISTEMA VET'
+    'Atualiza Vetinos'
   ]);
 
   console.log('\n5. Enviando ao GitHub...');
@@ -250,7 +250,7 @@ function publicarGit() {
 
 function main() {
   console.log('\n===================================');
-  console.log('       PUBLICAÇÃO SISTEMA VET');
+  console.log('       PUBLICAÇÃO VETINOS');
   console.log('===================================');
 
   console.log('\n1. Verificando arquivos...');
