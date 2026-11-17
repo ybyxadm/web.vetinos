@@ -4,9 +4,10 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
     "montar": "vite build",
-    "ver": "vite build && vite",
-    "dev": "vite build && vite"
+    "ver": "vite build && vite"
   },
   "dependencies": {
     "firebase": "^10.8.0",
