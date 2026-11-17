@@ -1,14 +1,12 @@
-
 {
   "name": "Vetinos",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "publicar": "node scripts/publicar.js"
+    "montar": "vite build",
+    "ver": "vite build && vite",
+    "dev": "vite build && vite"
   },
   "dependencies": {
     "firebase": "^10.8.0",

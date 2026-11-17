@@ -1,13 +1,12 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
+// https://vitejs.dev/config/
 export default defineConfig({
-  root: 'docs',
-  publicDir: 'public',
+  root: 'docs', // <-- Define a pasta docs como a raiz do Vite
   plugins: [react()],
-  base: '/web.vetinos/',
-  build: {
-    outDir: '../dist',
-    emptyOutDir: true,
-  },
+  server: {
+    port: 5173,
+    open: true
+  }
 })
