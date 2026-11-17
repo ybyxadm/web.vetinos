@@ -32,6 +32,8 @@ A plataforma está sendo desenvolvida em módulos integrados:
 - Assinatura eletrônica/digital e gestão documental.
 - Monitoramento de transfusão sanguínea.
 - Relatórios e indicadores.
+- Central de Serviços Internos e Manutenção.
+- Central de Conhecimento e Comunicação Interna.
 - Painel administrativo MASTER.
 
 Os módulos serão disponibilizados gradualmente, conforme forem implementados e validados.
