@@ -328,6 +328,7 @@ Exemplos:
 | Assinatura eletrônica/digital | Integra documentos a tutores, pacientes, atendimentos, internações e procedimentos, mantendo evidências e rastreabilidade |
 | Monitoramento de transfusão | Integra o paciente e o internamento ao registro de hemocomponentes, parâmetros e intercorrências |
 | Central de Conhecimento e Comunicação Interna | Utiliza usuários, funções, setores, unidades e permissões para criar, revisar, publicar e distribuir materiais internos, acompanhar leituras e manter versões |
+| Central de Serviços Internos e Manutenção | Utiliza organização, unidade, usuários, categorias de atendimento, responsáveis e notificações para registrar, encaminhar, acompanhar e concluir solicitações operacionais |
 
 ## 5.1 Regras de integração
 
@@ -525,6 +526,72 @@ Objetivo: permitir que o gestor da organização ou unidade, ou colaboradores fo
 - [ ] Testar permissões de criação e publicação, direcionamento por setor, confirmação de leitura, histórico de versões, anexos e uso em dispositivos móveis.
 
 **Regras de integração e segurança:** utilizar os usuários, funções, setores, unidades e permissões já existentes, respeitando o isolamento entre organizações. O gestor deverá controlar as delegações e o alcance das publicações. A confirmação de leitura deverá ser tratada como evidência de ciência, não como assinatura eletrônica ou concordância formal. Quando um documento exigir assinatura, deverá utilizar o fluxo próprio de assinatura eletrônica/digital. Publicações, confirmações e alterações de permissão somente poderão ser consideradas concluídas após confirmação efetiva do banco de dados.
+
+
+## 6.11 MÓDULO — CENTRAL DE SERVIÇOS INTERNOS E MANUTENÇÃO
+
+**Status: Planejado.** Funcionalidade aprovada para desenvolvimento futuro. Ainda não implementada.
+
+**Objetivo:** centralizar solicitações operacionais da unidade, especialmente manutenção e suporte, substituindo a dispersão de pedidos em grupos de mensagens e mantendo histórico, responsáveis, prazos e acompanhamento dentro do Vetinos.
+
+### 6.11.1 Abertura de solicitações
+
+- [ ] Permitir que colaboradores autorizados abram solicitações vinculadas à organização e à unidade em que atuam.
+- [ ] Registrar título, descrição do problema, categoria, local/setor, data e hora e solicitante.
+- [ ] Permitir informar prioridade ou impacto percebido, com critérios definidos pela gestão.
+- [ ] Permitir anexar fotos e documentos para contextualizar o chamado.
+- [ ] Gerar identificador único para acompanhamento da solicitação.
+- [ ] Permitir consultar o andamento e o histórico das solicitações abertas pelo próprio usuário, conforme as permissões.
+
+### 6.11.2 Categorias e responsáveis
+
+- [ ] Disponibilizar categorias configuráveis, como manutenção predial, elétrica, hidráulica, climatização, equipamentos veterinários, informática/TI, mobiliário e limpeza.
+- [ ] Permitir ao gestor habilitar categorias e definir responsáveis por categoria em cada unidade.
+- [ ] Permitir configurar usuários responsáveis por uma ou mais categorias no cadastro/permissões, sem conceder acesso administrativo amplo automaticamente.
+- [ ] Permitir encaminhar ou reatribuir solicitações a outro responsável ou equipe, mantendo o histórico da atribuição.
+- [ ] Prever responsáveis substitutos ou equipes quando a operação da unidade exigir.
+
+### 6.11.3 Fluxo e acompanhamento dos chamados
+
+- [ ] Definir estados do fluxo, inicialmente: Aberta, Em análise, Aguardando informações, Em andamento, Concluída e Cancelada.
+- [ ] Permitir que o responsável registre diagnóstico, comentários, providências, materiais utilizados e solução aplicada.
+- [ ] Registrar responsável atual, alterações de status, datas e horários de cada movimentação.
+- [ ] Permitir solicitar informações adicionais ao solicitante e registrar a resposta no próprio chamado.
+- [ ] Registrar motivo obrigatório para cancelamento e, quando aplicável, para encerramento sem execução.
+- [ ] Permitir reabrir uma solicitação concluída, preservando o histórico anterior.
+- [ ] Disponibilizar filtros por unidade, categoria, status, prioridade, responsável e período.
+- [ ] Disponibilizar indicadores gerenciais, como volume de chamados, pendências, tempo de atendimento e solicitações por categoria, respeitando as permissões.
+
+### 6.11.4 Comunicação e notificações
+
+- [ ] Integrar os chamados à Central de Notificações compartilhada do Vetinos, evitando a criação de sistemas de alerta independentes para cada módulo.
+- [ ] Notificar os responsáveis habilitados quando uma nova solicitação de sua categoria/unidade for aberta ou atribuída.
+- [ ] Notificar o solicitante sobre mudanças relevantes, pedidos de informação, conclusão ou cancelamento do chamado.
+- [ ] Disponibilizar notificações no próprio sistema/intranet, com histórico e acesso direto ao chamado.
+- [ ] Prever futuramente notificações por e-mail e outros canais, conforme configuração da organização e viabilidade técnica.
+- [ ] Permitir que os usuários consultem notificações pendentes e já lidas, sem depender de grupos externos de WhatsApp.
+- [ ] Diferenciar avisos gerais, comunicados direcionados e notificações transacionais geradas por solicitações.
+
+### 6.11.5 Integração com a comunicação interna
+
+- [ ] Integrar a Central de Serviços ao Painel de Comunicados e à Central de Conhecimento e Comunicação Interna, mantendo cada finalidade organizada.
+- [ ] Permitir que comunicados gerais ou direcionados sejam publicados para toda a organização, unidades, setores, funções ou usuários específicos, conforme permissões.
+- [ ] Permitir acompanhar confirmação de leitura de comunicados quando exigida pela gestão.
+- [ ] Manter chamados operacionais privados aos envolvidos e responsáveis autorizados; não expor detalhes de solicitações individuais em comunicados gerais.
+- [ ] Permitir divulgar avisos de manutenção programada como comunicados direcionados aos setores ou unidades afetados.
+
+### 6.11.6 Permissões, segurança e rastreabilidade
+
+- [ ] Permitir que o gestor configure quem pode abrir, visualizar, atribuir, assumir, editar, comentar, concluir e administrar solicitações.
+- [ ] Restringir a visualização dos chamados conforme organização, unidade, participação no chamado e permissões administrativas.
+- [ ] Permitir visão consolidada para gestores autorizados, sem quebrar o isolamento entre organizações.
+- [ ] Registrar autoria e histórico das ações relevantes, preservando a rastreabilidade.
+- [ ] Evitar exposição de informações clínicas ou pessoais que não sejam necessárias à solicitação.
+- [ ] Garantir que anexos respeitem as mesmas regras de acesso dos respectivos chamados.
+- [ ] Testar acesso entre organizações, unidades, setores e perfis distintos.
+
+**Regras de integração e segurança:** reutilizar os cadastros de organização, unidade e usuários, além do modelo de permissões existente. Categorias e responsáveis deverão ser configuráveis por organização/unidade. As notificações deverão utilizar uma infraestrutura compartilhada, com destinatários calculados a partir das permissões e atribuições vigentes. Abertura, atualização, atribuição, comentários e conclusão somente poderão ser confirmados ao usuário após confirmação efetiva do banco de dados. O histórico do chamado deverá ser preservado para auditoria. A integração com e-mail ou outros canais externos será uma evolução futura e não deverá ser considerada disponível antes de implementação e testes.
+
 
 # 7. DISPONIBILIZAÇÃO GRADUAL
 
