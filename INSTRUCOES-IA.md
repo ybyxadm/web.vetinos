@@ -176,25 +176,20 @@ Uma funcionalidade somente estará integrada quando o fluxo entre os módulos fo
 
 ## 8. AMBIENTES
 
-O projeto utilizará três ambientes:
+O projeto utilizará dois ambientes:
 
-| Nome | Identificação técnica | Função |
-|---|---|---|
-| DESENVOLVIMENTO | DEV | Programação |
-| TESTES | HML | Validação |
-| OFICIAL | PRD | Operação real |
+| Nome | Identificação técnica | Repositório GitHub | Função |
+|---|---|---|---|
+| TESTES | DEV | `dev-vetinos` (`origin`) | Programação, correções, validações e simulações |
+| OFICIAL | PRD | `app.vetinos` (`app`) | Operação real |
 
-Cada ambiente deverá possuir projeto Firebase independente.
+O ambiente separado de DESENVOLVIMENTO foi eliminado. Toda construção e validação acontecerá no ambiente TESTES (DEV), que deverá possuir projeto Firebase e dados independentes do ambiente OFICIAL.
 
-O código-fonte permanecerá em um único projeto local e um único repositório GitHub.
+O código-fonte será mantido em uma única pasta local no VS Code, vinculada aos dois repositórios GitHub por remotes distintos: `origin` para `dev-vetinos` e `app` para `app.vetinos`.
 
-As configurações deverão selecionar o ambiente correto por meio dos mecanismos adotados pelo projeto, como variáveis de ambiente do Vite.
+As configurações deverão selecionar o projeto Firebase correto por meio dos mecanismos adotados pelo projeto, como variáveis de ambiente do Vite. Nunca misturar dados ou credenciais entre ambientes.
 
-Nunca misturar dados ou credenciais entre ambientes.
-
-Nunca realizar testes destrutivos no ambiente OFICIAL.
-
-O ambiente TESTES deverá utilizar dados fictícios ou dados adequadamente autorizados e protegidos.
+Nunca realizar testes destrutivos no ambiente OFICIAL. O ambiente TESTES deverá utilizar dados fictícios ou dados adequadamente autorizados e protegidos.
 
 ## 9. SEGURANÇA E FIREBASE
 
