@@ -1,26 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { initializeApp } from 'firebase/app';
-import {
-  getAuth,
-  onAuthStateChanged,
-  signInWithEmailAndPassword,
-  signOut
-} from 'firebase/auth';
-import { getFirestore, doc, getDoc } from 'firebase/firestore';
-
-const firebaseConfig = {
-  apiKey: "AIzaSyBZMATRwyxZU0ud2bzKV3AyZ3kAVtK2W-0",
-  authDomain: "banco-de-dados-clinica-23b42.firebaseapp.com",
-  projectId: "banco-de-dados-clinica-23b42",
-  storageBucket: "banco-de-dados-clinica-23b42.firebasestorage.app",
-  messagingSenderId: "119527584560",
-  appId: "1:119527584560:web:948e30109a2fa0ec0f0ef5",
-  measurementId: "G-2H9BCVKXGZ"
-};
-
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getFirestore(app);
+import React, { useState } from 'react';
 
 const WEB3FORMS_ACCESS_KEY = 'dd383332-8636-4d2c-97d8-1f7cfb318b75';
 
@@ -176,8 +154,16 @@ const faqs = [
     answer: 'Não. A proposta é atender clínicas independentes, hospitais veterinários e organizações com várias unidades, permitindo uma evolução gradual da estrutura.'
   },
   {
-    question: 'É possível administrar mais de uma unidade?',
-    answer: 'Essa é uma das bases da arquitetura planejada. Uma organização poderá possuir várias unidades, com operações próprias e gestão consolidada conforme as permissões.'
+    question: 'Qual a diferença entre Vetinos Local e Vetinos Web?',
+    answer: 'O Vetinos Local é uma instalação independente para uma clínica de unidade única, com acesso pela rede interna e operação local prevista. O Vetinos Web é a modalidade online indicada para redes que precisam administrar várias unidades em conjunto.'
+  },
+  {
+    question: 'Uma clínica com duas unidades pode usar o Vetinos Local?',
+    answer: 'No modelo Local, cada unidade teria uma instalação independente, sem gestão centralizada entre elas. Para administrar várias unidades em conjunto, a modalidade indicada é o Vetinos Web.'
+  },
+  {
+    question: 'O Vetinos Local já funciona sem internet?',
+    answer: 'A operação local com servidor na clínica e acesso pela rede interna é uma modalidade prevista no projeto. Ela ainda depende de implementação, testes de instalação, segurança, backup e recuperação antes de ser oferecida.'
   },
   {
     question: 'Os módulos já estão todos disponíveis?',
@@ -262,10 +248,6 @@ function StatusLabel({ children = 'Em desenvolvimento' }) {
 }
 
 export default function App() {
-  const [user, setUser] = useState(null);
-  const [clinicData, setClinicData] = useState(null);
-  const [loading, setLoading] = useState(true);
-
   const [contact, setContact] = useState({
     name: '',
     email: '',
@@ -276,34 +258,6 @@ export default function App() {
   const [sending, setSending] = useState(false);
   const [contactStatus, setContactStatus] = useState(null);
   const [openFaq, setOpenFaq] = useState(0);
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
-      setUser(currentUser);
-
-      if (currentUser) {
-        try {
-          const clinicDocRef = doc(db, 'clinics', currentUser.uid);
-          const clinicSnap = await getDoc(clinicDocRef);
-
-          if (clinicSnap.exists()) {
-            setClinicData(clinicSnap.data());
-          } else {
-            setClinicData({ name: 'Minha Clínica Veterinária' });
-          }
-        } catch (err) {
-          console.error('Erro ao buscar dados da clínica:', err);
-          setClinicData({ name: 'Vetinos' });
-        }
-      } else {
-        setClinicData(null);
-      }
-
-      setLoading(false);
-    });
-
-    return () => unsubscribe();
-  }, []);
 
   const handleContactChange = (e) => {
     const { name, value } = e.target;
@@ -376,21 +330,6 @@ export default function App() {
       behavior: 'smooth'
     });
   };
-
-  if (loading) {
-    return (
-      <div style={{
-        minHeight: '100vh',
-        display: 'grid',
-        placeItems: 'center',
-        background: '#fffdfa',
-        color: '#c2410c',
-        fontFamily: 'Arial, sans-serif'
-      }}>
-        Carregando Vetinos...
-      </div>
-    );
-  }
 
   return (
     <div style={styles.page}>
@@ -479,14 +418,14 @@ export default function App() {
           }}>
             <a href="#sobre">Sobre</a>
             <a href="#recursos">Recursos</a>
-            <a href="#estrutura">Estrutura</a>
+            <a href="#modalidades">Modalidades</a>
             <a href="#planos">Planos</a>
             <a href="#duvidas">Dúvidas</a>
           </nav>
 
           {/* REDIRECIONAMENTO DIRETO PARA O ACESSO EXTERNO DO SISTEMA */}
           <a
-            href="https://ybyxadm.github.io/app.vetinos/acesso.html"
+            href="https://app-vetinos.web.app/acesso.html"
             style={{
               ...styles.primaryButton,
               padding: '11px 18px',
@@ -707,95 +646,54 @@ export default function App() {
           </div>
         </section>
 
-        {/* PLANOS E PREÇOS */}
-        <section id="planos" className="vet-section" style={styles.section}>
+        {/* MODALIDADES DE IMPLANTAÇÃO */}
+        <section id="modalidades" className="vet-section" style={styles.section}>
           <div style={styles.container}>
             <SectionHeading
-              eyebrow="Planos e condições"
-              title="Uma solução que acompanha o tamanho da sua operação."
-              text="Os planos comerciais do Vetinos estão em formação. A proposta é estruturar condições adequadas para diferentes tamanhos e necessidades de operação."
+              eyebrow="Duas modalidades independentes"
+              title="O Vetinos se adapta à forma como sua clínica trabalha."
+              text="Escolha entre uma instalação local, voltada a uma unidade independente, ou a plataforma web online, preparada para redes que precisam administrar várias unidades em conjunto."
             />
 
-            <div className="vet-three">
-              {[
-                {
-                  icon: '🐾',
-                  title: 'Clínica',
-                  subtitle: 'Para operações independentes',
-                  description: 'Uma estrutura para acompanhar a organização e a rotina de uma clínica veterinária.'
-                },
-                {
-                  icon: '🏥',
-                  title: 'Hospital',
-                  subtitle: 'Para operações ampliadas',
-                  description: 'Uma proposta voltada a operações com diferentes rotinas e necessidades de gestão.'
-                },
-                {
-                  icon: '🏢',
-                  title: 'Rede',
-                  subtitle: 'Para múltiplas unidades',
-                  description: 'Uma estrutura pensada para organizações que precisam acompanhar várias unidades.'
-                }
-              ].map((plan) => (
-                <div key={plan.title} style={{
-                  ...styles.card,
-                  textAlign: 'center',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  minHeight: '300px'
-                }}>
-                  <div style={{ fontSize: '35px', marginBottom: '14px' }}>
-                    {plan.icon}
-                  </div>
-                  <h3 style={{
-                    color: '#9a3412',
-                    fontSize: '21px',
-                    margin: '0 0 7px'
-                  }}>
-                    {plan.title}
-                  </h3>
-                  <p style={{
-                    color: '#a16207',
-                    fontSize: '12px',
-                    fontWeight: 'bold',
-                    margin: '0 0 17px'
-                  }}>
-                    {plan.subtitle}
-                  </p>
-                  <p style={{
-                    color: '#78716c',
-                    fontSize: '13px',
-                    lineHeight: 1.7,
-                    flex: 1
-                  }}>
-                    {plan.description}
-                  </p>
-                  <div style={{
-                    background: '#fff7ed',
-                    color: '#9a3412',
-                    padding: '13px',
-                    borderRadius: '11px',
-                    fontSize: '13px',
-                    fontWeight: 'bold',
-                    marginBottom: '15px'
-                  }}>
-                    Valores em formação
-                  </div>
-                  <button
-                    onClick={() => {
-                      setContact((previous) => ({
-                        ...previous,
-                        subject: `Interesse no Vetinos - ${plan.title}`
-                      }));
-                      goToContact();
-                    }}
-                    style={styles.secondaryButton}
-                  >
-                    Tenho interesse
-                  </button>
+            <div className="vet-two" style={{ alignItems: 'stretch' }}>
+              <div style={{ ...styles.card, display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                <div style={{ fontSize: '38px' }}>🖥️</div>
+                <div>
+                  <span style={styles.eyebrow}>Instalação local</span>
+                  <h3 style={{ color: '#9a3412', fontSize: '24px', margin: '0 0 8px' }}>Vetinos Local</h3>
+                  <p style={{ color: '#78716c', fontSize: '14px', lineHeight: 1.7, margin: 0 }}>Para clínica independente que utiliza uma única unidade e prefere manter a operação em sua própria estrutura.</p>
                 </div>
-              ))}
+                <ul style={{ color: '#57534e', fontSize: '13px', lineHeight: 1.9, paddingLeft: '20px', margin: 0 }}>
+                  <li>Instalado em um computador servidor da clínica.</li>
+                  <li>Computadores e tablets acessam pela rede local.</li>
+                  <li>Operação prevista mesmo sem conexão com a internet.</li>
+                  <li>Banco de dados e instalação próprios daquela unidade.</li>
+                  <li>Atualizações e cópias de segurança administradas localmente.</li>
+                </ul>
+                <div style={{ marginTop: 'auto', padding: '13px', borderRadius: '11px', background: '#fff7ed', color: '#9a3412', fontSize: '12px', lineHeight: 1.6 }}>Cada instalação é independente. Se uma empresa tiver mais de uma unidade e optar pelo modelo local, cada unidade terá seu próprio sistema, sem gestão centralizada entre elas.</div>
+                <button onClick={() => { setContact((previous) => ({ ...previous, subject: 'Interesse no Vetinos Local' })); goToContact(); }} style={styles.secondaryButton}>Tenho interesse no Vetinos Local</button>
+              </div>
+
+              <div style={{ ...styles.card, display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                <div style={{ fontSize: '38px' }}>☁️</div>
+                <div>
+                  <span style={styles.eyebrow}>Plataforma online</span>
+                  <h3 style={{ color: '#9a3412', fontSize: '24px', margin: '0 0 8px' }}>Vetinos Web</h3>
+                  <p style={{ color: '#78716c', fontSize: '14px', lineHeight: 1.7, margin: 0 }}>Para redes, grupos e organizações que precisam conectar e administrar duas ou mais unidades em uma única estrutura.</p>
+                </div>
+                <ul style={{ color: '#57534e', fontSize: '13px', lineHeight: 1.9, paddingLeft: '20px', margin: 0 }}>
+                  <li>Acesso pela internet, sem servidor na recepção.</li>
+                  <li>Administração centralizada de várias unidades.</li>
+                  <li>Usuários e permissões conforme organização e unidade.</li>
+                  <li>Dados compartilhados ou separados conforme as regras da rede.</li>
+                  <li>Atualizações e infraestrutura administradas centralmente.</li>
+                </ul>
+                <div style={{ marginTop: 'auto', padding: '13px', borderRadius: '11px', background: '#fff7ed', color: '#9a3412', fontSize: '12px', lineHeight: 1.6 }}>A modalidade web é a opção indicada para redes que precisam de visão e gestão integradas entre unidades.</div>
+                <button onClick={() => { setContact((previous) => ({ ...previous, subject: 'Interesse no Vetinos Web para rede' })); goToContact(); }} style={styles.secondaryButton}>Tenho interesse no Vetinos Web</button>
+              </div>
             </div>
+
+            <p style={{ color: '#a8a29e', fontSize: '12px', lineHeight: 1.7, textAlign: 'center', maxWidth: '820px', margin: '24px auto 0' }}>As modalidades e seus recursos estão em estruturação e serão disponibilizados após implementação e validação. Planos, valores, requisitos técnicos e condições de contratação serão informados pela equipe Vetinos.</p>
           </div>
         </section>
 
