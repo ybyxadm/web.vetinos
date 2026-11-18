@@ -77,17 +77,16 @@ Os módulos seguintes deverão se integrar aos cadastros e serviços já existen
 
 ## 4. Ambientes do sistema
 
-O desenvolvimento será organizado em três ambientes:
+O Vetinos utilizará dois ambientes:
 
-| Ambiente | Finalidade |
-|---|---|
-| DESENVOLVIMENTO | Construção e correção do sistema |
-| TESTES | Validação de funcionalidades e simulações de falhas |
-| OFICIAL | Operação real das organizações |
+| Ambiente | Repositório | Finalidade |
+|---|---|---|
+| TESTES (DEV) | `dev-vetinos` | Desenvolvimento, correções, validações e simulações de falhas |
+| OFICIAL (PRD) | `app.vetinos` | Operação real das organizações |
 
-Cada ambiente utilizará seu próprio projeto Firebase e seus próprios dados.
+O ambiente separado de DESENVOLVIMENTO foi eliminado. A construção e a validação das alterações acontecerão no ambiente TESTES (DEV), com dados e projeto Firebase próprios. Somente alterações aprovadas serão publicadas no ambiente OFICIAL (PRD).
 
-O código-fonte será mantido em um único projeto no VS Code e em um único repositório GitHub, com configurações específicas para cada ambiente.
+O código será mantido em uma única pasta local no VS Code, com dois remotes Git: `origin` para `dev-vetinos` e `app` para `app.vetinos`. Cada ambiente continuará utilizando seu próprio projeto Firebase e seus próprios dados.
 
 ## 5. Segurança e integridade dos dados
 
