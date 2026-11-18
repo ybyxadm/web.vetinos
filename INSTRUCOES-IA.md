@@ -19,7 +19,7 @@ Princípios fundamentais:
 
 Repositórios em : https://github.com/ybyxadm
 site institucional git: https://ybyxadm.github.io/web.vetinos/
-site sistema git: https://ybyxadm.github.io/web.vetinos/
+site sistema git: https://ybyxadm.github.io/app.vetinos/
 
 redirecionamentos
 Site institucional firebase: https://web-vetinos.web.app
