@@ -51,37 +51,25 @@ Serão utilizados dois ambientes independentes. O ambiente separado de DESENVOLV
 | TESTES | DEV | `dev-vetinos` | Desenvolvimento, correção, validação e simulações |
 | OFICIAL | PRD | `app.vetinos` | Operação real |
 
-## 2.1 DESENVOLVIMENTO
+## 2.1 TESTES
 
-Ambiente utilizado durante a programação.
-
-Objetivos:
-
-- Criar funcionalidades.
-- Corrigir erros.
-- Testar componentes.
-- Realizar alterações estruturais.
-- Validar integrações iniciais.
-
-## 2.2 TESTES
-
-Ambiente destinado à validação antes da liberação oficial.
+Ambiente utilizado tanto para desenvolver quanto para validar alterações antes da liberação oficial.
 
 Objetivos:
 
-- Testar fluxos completos.
-- Simular falhas de comunicação.
-- Testar indisponibilidade do banco.
-- Verificar mensagens de erro.
-- Validar permissões.
+- Criar funcionalidades e corrigir erros.
+- Testar componentes e realizar alterações estruturais.
+- Validar integrações iniciais e fluxos completos.
+- Simular falhas de comunicação e indisponibilidade do banco.
+- Verificar mensagens de erro e permissões.
 - Testar isolamento entre organizações.
-- Verificar comportamento dos módulos integrados.
+- Verificar o comportamento dos módulos integrados.
 
 Deverá utilizar dados fictícios ou devidamente preparados para testes.
 
 Não utilizar dados clínicos reais sem autorização, controles de segurança e política adequada.
 
-## 2.3 OFICIAL
+## 2.2 OFICIAL
 
 Ambiente destinado à utilização real pelas organizações contratantes.
 
@@ -99,15 +87,14 @@ O projeto deverá manter:
 
 - Um único código-fonte.
 - Um único projeto local no VS Code.
-- Um único repositório GitHub.
-- Projetos Firebase independentes para cada ambiente.
+- Dois repositórios GitHub (`dev-vetinos` e `app.vetinos`), vinculados à mesma pasta local por remotes distintos.
+- Projetos Firebase independentes para os dois ambientes.
 - Configurações e variáveis de ambiente específicas.
 
 Sugestão de identificação visual dos projetos Firebase:
 
-- Vetinos - DESENVOLVIMENTO
-- Vetinos - TESTES
-- Vetinos - OFICIAL
+- Vetinos - TESTES (DEV)
+- Vetinos - OFICIAL (PRD)
 
 A implementação deverá verificar a configuração atual antes de criar, migrar ou renomear projetos.
 
