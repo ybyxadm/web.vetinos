@@ -7,7 +7,7 @@ Documento oficial de planejamento, prioridades, arquitetura e evolução do Veti
 
 Repositórios em : https://github.com/ybyxadm
 site institucional git: https://ybyxadm.github.io/web.vetinos/
-site sistema git: https://ybyxadm.github.io/web.vetinos/
+site sistema git: https://ybyxadm.github.io/app.vetinos/
 
 redirecionamentos
 Site institucional firebase: https://web-vetinos.web.app
@@ -828,7 +828,9 @@ Possíveis investimentos deverão ser tratados por instrumentos formais, com pre
 - [ ] Planejar exportação dos dados de uma organização.
 - [ ] Planejar portabilidade.
 - [ ] Desenvolver camada intermediária de acesso aos dados.
-- [ ] Avaliar futura operação local com sincronização.
+- [ ] Projetar o Vetinos Local como instalação independente, com banco, backup e atualização próprios.
+- [ ] Projetar o Vetinos Web como serviço online multiempresa/multiunidade.
+- [ ] Não prever sincronização automática entre instalações locais independentes e o Vetinos Web: são modalidades separadas.
 
 Backup e exportação de dados são recursos diferentes e deverão ser tratados separadamente.
 
@@ -866,3 +868,77 @@ Cada módulo deverá aproveitar os cadastros, serviços, permissões e estrutura
 Não desenvolver funcionalidades isoladas que provoquem duplicidade de dados ou dificultem a evolução futura.
 
 **EVOLUIR, INTEGRAR E PROTEGER.**
+
+
+# 18. MODALIDADES DE PRODUTO E SEPARAÇÃO ENTRE INSTITUCIONAL E APLICAÇÃO
+
+**Status: Decisão arquitetural e comercial aprovada. Implementação das modalidades locais e web ainda depende de desenvolvimento e validação.**
+
+O Vetinos será oferecido em duas modalidades independentes. Não são perfis ou modos que o cliente alterna dentro da mesma instalação.
+
+## 18.1 Vetinos Local
+
+Destinado a uma clínica independente com uma única unidade.
+
+- Instalação em um computador servidor mantido ligado durante o expediente.
+- Computadores e tablets acessam o sistema pela rede local da clínica.
+- A operação deverá continuar na rede interna mesmo quando a internet estiver indisponível.
+- Banco de dados, arquivos, backups, configuração e atualizações pertencem àquela instalação.
+- A instalação local não será sincronizada automaticamente com uma instalação de outra unidade ou com o Vetinos Web.
+- Se uma organização tiver mais de uma unidade e optar por esse modelo, cada unidade terá uma instalação independente, sem gestão centralizada entre elas.
+
+## 18.2 Vetinos Web
+
+Destinado a redes e organizações com duas ou mais unidades que precisam de gestão integrada.
+
+- Aplicação hospedada na nuvem e acessada pela internet.
+- Administração centralizada da organização e de suas unidades.
+- Usuários, funções e permissões conforme organização e unidade.
+- Compartilhamento de cadastros e consolidação de indicadores conforme as regras de acesso.
+- Atualizações e infraestrutura administradas centralmente.
+
+Para redes que precisam visualizar e administrar as unidades em conjunto, a modalidade comercial indicada será Vetinos Web.
+
+## 18.3 Separação dos sites
+
+Os dois endereços possuem responsabilidades distintas:
+
+- **Site institucional — `web.vetinos`:** apresentação, divulgação, recursos, modalidades, planos, valores, contato e captação comercial. Não deverá conter login operacional nem administrar dados de clínicas.
+- **Aplicação — `app.vetinos`:** sistema de gestão propriamente dito, com tela de login própria, autenticação, módulos, dados, permissões e rotinas operacionais.
+
+O botão “Acessar sistema” do site institucional deverá direcionar para:
+
+`https://app-vetinos.web.app/acesso.html`
+
+A autenticação da aplicação deverá ocorrer somente no ambiente da aplicação, sem dependência de sessão Firebase do site institucional.
+
+## 18.4 Comunicação comercial e status
+
+O site institucional poderá apresentar as duas modalidades e os recursos previstos, mas deverá diferenciar claramente o que está planejado, em desenvolvimento, validado e disponível. Não prometer operação offline, servidor local, sincronização, gestão multiunidade ou qualquer outro recurso antes da implementação e validação correspondentes.
+
+Planos, valores, requisitos de instalação e condições comerciais permanecem sujeitos à definição formal.
+
+## 18.5 Critérios para disponibilização
+
+**Vetinos Local**
+- [ ] Definir sistema operacional e requisitos mínimos do computador servidor.
+- [ ] Definir serviço de aplicação e banco de dados local.
+- [ ] Implementar acesso simultâneo pela rede interna.
+- [ ] Implementar autenticação e permissões locais seguras.
+- [ ] Implementar backup, restauração e atualização controlada.
+- [ ] Testar funcionamento sem internet.
+- [ ] Testar queda e reinicialização do servidor.
+- [ ] Documentar instalação e suporte.
+
+**Vetinos Web**
+- [ ] Validar autenticação e isolamento entre organizações.
+- [ ] Validar gestão multiunidade e permissões.
+- [ ] Validar backups e recuperação na nuvem.
+- [ ] Validar disponibilidade e monitoramento.
+- [ ] Documentar contratação e provisionamento de organizações.
+
+**Site institucional**
+- [x] Separar finalidade institucional da aplicação.
+- [x] Apresentar as duas modalidades com seus públicos e diferenças.
+- [x] Direcionar o botão “Acessar sistema” para a tela de login de `app.vetinos`.
+- [ ] Revisar a apresentação comercial conforme os recursos efetivamente liberados.
