@@ -44,13 +44,12 @@ Princípios:
 
 # 2. AMBIENTES DO SISTEMA
 
-Serão utilizados três ambientes independentes.
+Serão utilizados dois ambientes independentes. O ambiente separado de DESENVOLVIMENTO foi incorporado ao ambiente TESTES: programação, correções, validações e simulações ocorrerão no mesmo ambiente não produtivo.
 
-| Nome | Identificação técnica | Utilização |
-|---|---|---|
-| DESENVOLVIMENTO | DEV | Construção e correção |
-| TESTES | HML | Validação e simulações |
-| OFICIAL | PRD | Operação real |
+| Nome | Identificação técnica | Repositório | Utilização |
+|---|---|---|---|
+| TESTES | DEV | `dev-vetinos` | Desenvolvimento, correção, validação e simulações |
+| OFICIAL | PRD | `app.vetinos` | Operação real |
 
 ## 2.1 DESENVOLVIMENTO
 
