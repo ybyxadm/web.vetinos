@@ -127,13 +127,39 @@ Operações essenciais deverão receber prioridade, sem comprometer a integridad
 
 Os testes de indisponibilidade serão realizados no ambiente TESTES.
 
-## 7. Apresentação comercial
+## 7. Modalidades independentes de implantação
 
-A apresentação comercial será disponibilizada no próprio site do Vetinos, utilizando o documento de apresentação comercial como referência.
+O Vetinos terá duas modalidades comerciais e técnicas distintas. Não são dois modos alternáveis dentro da mesma instalação.
+
+### Vetinos Local
+
+- Destinado a clínicas independentes com uma única unidade.
+- Instalado em um computador servidor mantido pela clínica durante o expediente.
+- Outros computadores e tablets acessam o servidor pela rede local.
+- A operação deverá continuar disponível na rede interna mesmo sem internet.
+- Cada instalação possui banco de dados, configuração, backup e ciclo de atualização próprios.
+- Se uma organização possuir várias unidades e escolher instalações locais independentes, cada unidade terá seu próprio sistema, sem gestão centralizada ou sincronização automática entre elas.
+
+### Vetinos Web
+
+- Destinado a redes e organizações que precisam administrar duas ou mais unidades em conjunto.
+- Hospedado na nuvem e acessado pela internet.
+- Permite administração centralizada da organização, unidades, usuários e permissões.
+- O compartilhamento de cadastros e a separação das operações deverão respeitar as regras multiempresa e multiunidade.
+
+**Regra comercial:** para uma rede que precisa de gestão integrada entre unidades, a modalidade indicada é Vetinos Web. O Vetinos Local não deverá ser apresentado como solução multiunidade centralizada.
+
+As duas modalidades ainda dependem de implementação e validação dos respectivos recursos. Não anunciar como disponível uma funcionalidade que permaneça planejada.
+
+## 8. Apresentação comercial
+
+O site institucional `web.vetinos` tem finalidade exclusivamente institucional e comercial: apresentar a plataforma, explicar as duas modalidades, divulgar recursos e condições comerciais, receber contatos e promover o produto.
+
+O botão **Acessar sistema** deverá direcionar para `https://app-vetinos.web.app/acesso.html`, onde fica a aplicação `app.vetinos` e sua própria tela de login. O site institucional não deverá autenticar usuários da aplicação nem administrar dados de clínicas.
 
 Os planos e condições comerciais ainda estão em formação. A configuração futura deverá permitir administração pelo painel MASTER.
 
-## 8. Documentação oficial
+## 9. Documentação oficial
 
 Este projeto possui três documentos principais:
 
@@ -145,7 +171,7 @@ Este projeto possui três documentos principais:
 
 A leitura dos três documentos é obrigatória antes de qualquer trabalho de desenvolvimento.
 
-## 9. Tecnologias
+## 10. Tecnologias
 
 Tecnologias identificadas na documentação atual:
 
@@ -157,7 +183,7 @@ Tecnologias identificadas na documentação atual:
 
 A arquitetura e as tecnologias deverão ser confirmadas no código atual antes de qualquer alteração.
 
-## 10. Status do projeto
+## 11. Status do projeto
 
 O Vetinos está em desenvolvimento.
 
@@ -171,7 +197,7 @@ O andamento, as pendências e os critérios de conclusão deverão ser acompanha
 
 Repositórios em : https://github.com/ybyxadm
 site institucional git: https://ybyxadm.github.io/web.vetinos/
-site sistema git: https://ybyxadm.github.io/web.vetinos/
+site sistema git: https://ybyxadm.github.io/app.vetinos/
 
 redirecionamentos
 Site institucional firebase: https://web-vetinos.web.app
